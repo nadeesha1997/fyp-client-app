@@ -13,6 +13,7 @@ import SmoothScroll from "smooth-scroll";
 import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
 import "./App.css";
 import SignInSide from "./components/UI/SignIn";
+import SignUp from "./components/UI/SignUp";
 import { HomePage } from "./components/UI/Homepage";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -40,8 +41,9 @@ const App = () => {
       <Contact data={landingPageData.Contact} /> */}
       <Router>
         <Routes>
-          <Route exact path="/signin" element = {<SignInSide/>}/>
-          <Route exact path="/" element={<HomePage data={landingPageData.About}/>}/>
+          <Route exact path="/" element={<HomePage data={landingPageData.About} head={landingPageData.Header}/>}/>
+          <Route exact path="/SignUp" element = {<SignUp/>}/>
+          <Route exact path="/SignIn" element = {<SignInSide/>}/>
         </Routes>
       </Router>
       </>

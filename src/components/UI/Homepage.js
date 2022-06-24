@@ -4,7 +4,7 @@ import { Header } from "../header";
 export const HomePage=(props)=>{
     return(
         <>
-        <Header/>
+        <Header data={props.head}/>
         <About data={props.data}/>
         </>
     )

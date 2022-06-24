@@ -39,7 +39,7 @@ export default function SignInSide() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid container component="main" sx={{ height: '100vh' , paddingTop:"50px"}}>
         <CssBaseline />
         <Grid
           item
@@ -79,6 +79,7 @@ export default function SignInSide() {
                 id="email"
                 label="Email Address"
                 name="email"
+                InputProps={{ style: { fontSize: 12 } }}
                 autoComplete="email"
                 autoFocus
               />
@@ -87,6 +88,7 @@ export default function SignInSide() {
                 required
                 fullWidth
                 name="password"
+                InputProps={{ style: { fontSize: 12 } }}
                 label="Password"
                 type="password"
                 id="password"
@@ -111,7 +113,7 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/SignUp" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
